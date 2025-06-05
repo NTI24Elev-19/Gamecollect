@@ -1,0 +1,73 @@
+<html lang = "sv";>
+<head>
+<h1>FAQ</h1> <!--- Vrf kan kan det inte vara <Title>--->
+<style>
+   body {
+       background-color: grey;
+       font-family: Arial;
+	   
+	.accordion{
+	background-color: lightgrey;
+	color: black;
+	padding: 20px;
+	width: 75%;
+	text-align: left;
+	font-size: 15px;
+	transition: 0.4s:
+	}
+	
+	.active, .accordion:hover {
+  background-color: lightgrey; 
+}
+
+.panel {
+padding: 0 18px;
+background-color: grey;
+}	
+	 </style>
+	  </head>
+<body>
+	<button class= "accordion"> Varför kan man inte köpa spelen</button>
+	<div class = "panel">
+		 <p>Anledningen till att man inte kan köpa dessa spel är för att denna sida är endast en skoluppgift.</p>
+	</div>
+
+	<button class= "accordion"> Hur kan jag kontakta er? </button>
+	<div class = "panel">
+		 <p>Du kan kontakta oss via min e-post: GabbeMake@gmail.com eller ringa oss under vardagarna från kl 12:00 till 18:00. Nummret är 0762452</p>
+	</div>
+
+	<button class= "accordion"> Hur ofta uppdateras sidan med nya spel?</button>
+	<div class = "panel">
+		 <p>Webbplatsen uppdateras regelbundet, ofta varje vecka med nya spel, trailers och recensioner.</p>
+	</div>
+
+	<button class= "accordion"> Vilket är ert favoritspel?</button>
+	<div class = "panel">
+		 <p>Många i teamet älskar Resident Evil 4 – det är därför det är först på sidan </p>
+	</div>
+
+	<button class= "accordion"> Kan jag lämna egna recensioner?</button>
+	<div class = "panel">
+		 <p>Just nu kan besökare inte skriva egna recensioner, men vi arbetar på att lägga till den funktionen.</p>
+	</div>
+	 
+	 
+<script>
+var acc = document.getElementsByClassName("accordion"); <!--- Lägger till alla knappar i klassen accordion --->
+var i; <!--- Loop variabel--->
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() { <!--- Ifall klicka kör funktionen definierat i {} --->
+    var panel = this.nextElementSibling; 
+    if (panel.style.display === "block") {  
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
